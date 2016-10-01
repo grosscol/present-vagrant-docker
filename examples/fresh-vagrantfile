@@ -1,0 +1,21 @@
+Vagrant.configure(2) do |config|
+  # https://docs.vagrantup.com.
+
+  # The virtual machine specification
+  config.vm.box = "box-cutter/debian85"
+
+  config.vm.boot_timeout = 60
+
+  # Set the VM hostname
+  config.vm.hostname = "fresh"
+  config.vm.define "fresh"
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # accessing "localhost:8888" will access port 80 on the guest machine.
+  config.vm.network "forwarded_port", guest: 80,   host: 8888, auto_correct: true
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "fresh"
+    vb.memory = "1024"
+  end
+end
