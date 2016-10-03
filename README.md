@@ -15,7 +15,7 @@ The official docker what is, https://www.docker.com/what-docker.
 Install VirtualBox.
   This is the underlying VM.  You could use it directly with Oracle's GUI and command line tools if you wanted.
 Install Vagrant.
-  Because I would just end up writing a script to set up the VM for me.
+  Because I would just end up writing a script to set up the VM for me and vagrant.
 
 ### Make a Debian Box
 Common use cases:
@@ -96,3 +96,28 @@ Testing capistrano deployment processes is an example of a workflow that require
     ```bash
     cp examples/remote-vagrantfile ./Vagrantfile
     ```
+1. Start and provision vm
+    ```
+    vagrant up
+    ```
+1. View the ssh config that can be added to the local machine to facilitate conventional ssh into the virtual machine.
+      ```
+      vagrant ssh-config
+      ```
+1. Capistrano deployment example
+
+
+### Docker
+
+#### Container for a single component
+Dockerfile
+
+
+#### Multiple containers to be used together
+Docker compose
+1.  Copy docker compose file
+2.  Start docker compose
+		```
+		docker-compose up
+		```
+
