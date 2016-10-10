@@ -101,23 +101,13 @@ Testing capistrano deployment processes is an example of a workflow that require
     vagrant up
     ```
 1. View the ssh config that can be added to the local machine to facilitate conventional ssh into the virtual machine.
-      ```
-      vagrant ssh-config
-      ```
+    ```
+    vagrant ssh-config
+    ```
 1. Capistrano deployment example
 
 
 ### Docker
 
-#### Container for a single component
-Dockerfile
-
-
-#### Multiple containers to be used together
-Docker compose
-1.  Copy docker compose file
-2.  Start docker compose
-		```
-		docker-compose up
-		```
+See docker compose sample for Sufia setup at https://github.com/mlibrary/sufia-compose
 
